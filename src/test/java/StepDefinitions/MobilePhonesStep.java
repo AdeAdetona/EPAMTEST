@@ -16,6 +16,7 @@ import PAGES.HomePage;
 import PAGES.MobilePhonesPage;
 import PAGES.PhonesAndAccessoriesPage;
 import Utility.DriverFactory;
+import Utility.DriverManager;
 import Utility.LoggerHelper;
 import Utility.ReportManager;
 import io.cucumber.java.After;
@@ -35,7 +36,7 @@ public class MobilePhonesStep {
 
     @Before
     public void setUp() {
-        driver = DriverFactory.getDriver();
+        driver = DriverManager.getDriver();
         homePage = new HomePage(driver);
         electronicsPage = new ElectronicsPage(driver);
         phonesAndAccessoriesPage = new PhonesAndAccessoriesPage(driver);
